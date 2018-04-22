@@ -1,19 +1,26 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { ConnectedRouter } from 'react-router-redux'
+import { Provider } from 'react-redux'
+import { PersistGate } from 'redux-persist/integration/react'
+import {persistor} from './store/persistStore'
+import rootRoutes from './route'
 import './App.css';
 
 class App extends Component {
+  
+  shouldComponentUpdate () {
+    return false
+  }
+  
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <Provider store={this.props.store}>
+        <PersistGate loading={null} persistor={persistor}>
+          <ConnectedRouter history={this.props.history}>
+            {rootRoutes}
+          </ConnectedRouter>
+        </PersistGate>
+      </Provider>
     );
   }
 }
