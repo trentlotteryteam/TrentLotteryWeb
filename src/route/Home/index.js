@@ -6,6 +6,7 @@ import {connect} from 'react-redux'
 import {Link, withRouter} from 'react-router-dom'
 import {appConfigAction, appConfigSelector} from '../../util/config'
 import { Button } from 'react-bootstrap';
+import "./home.css"
 
 class Home extends Component {
   constructor(props) {
@@ -19,7 +20,7 @@ class Home extends Component {
   render() {
     let {hasWallet} = this.props
     return (
-      <div>
+      <div className="home-page">
         <div>Home</div>
         <div>user wallet exist: {String(hasWallet)}</div>
         <div>

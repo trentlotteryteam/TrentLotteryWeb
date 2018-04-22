@@ -59,7 +59,6 @@ export function appConfigReducer(state = initialState, action) {
 }
 
 function handleSaveHasWallet(state, action) {
-  console.log('state', state)
   let payload = action.payload
   state = state.set('hasWallet', payload.hasWallet)
   return state
