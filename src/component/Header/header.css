@@ -1,0 +1,41 @@
+.grid{
+  width: 100%;
+}
+
+.header-row {
+  background-color: black;
+  height: 6rem;
+
+}
+
+.header-col {
+  height: 100%;
+  /*background-color: yellow;*/
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.hit-num-box{
+  border: 1px solid rgba(224,6,21,0.43);
+  border-radius: 100px;
+  height: 3.75rem;
+  width: 33.33rem;
+  color: white;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.share-box{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: white;
+}
+
+.header-logo{
+  color: white;
+}

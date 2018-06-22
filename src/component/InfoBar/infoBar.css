@@ -1,0 +1,42 @@
+.grid{
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.show-grid {
+  height: 7rem;
+  background-color: rgba(51,36,191,0.4) ;
+  border: 1px solid #002546;
+  padding: 1rem 3.5rem;
+}
+
+.draw-info-box{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 5rem;
+  justify-content: flex-start;
+}
+
+.draw-info-logo{
+  height: 5rem;
+  width: 10rem;
+}
+
+.draw-info-text-box{
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.draw-info-text{
+  margin-top: 0.67rem;
+  font-size: 1.17rem;
+  color: #00A0E8;
+}
+
+.draw-info-text-white{
+  margin-top: 0.67rem;
+  font-size: 1.17rem;
+  color: #FFFFFF;
+}

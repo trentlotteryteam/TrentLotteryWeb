@@ -8,7 +8,7 @@ import Eos from 'eosjs'
 /*
 下注接口
  */
-async function betEos(params){
+export async function betEos(params){
   let {scatter,num} = params
   let identity = await scatter.getIdentity({ accounts:[webConfig.eosNetConfig] })
   let eos = scatter.eos( webConfig.eosNetConfig, Eos, {}, 'http' );
@@ -33,13 +33,14 @@ async function betEos(params){
 /*
 添加eosio.code权限接口
  */
-async function addActionCode (params){
+export async function addActionCode (params){
   let {scatter} = params
-  let identity = await scatter.getIdentity({ accounts:[this.network] })
+  let identity = await scatter.getIdentity({ accounts:[webConfig.eosNetConfig] })
   let account = identity.accounts.find(acc => acc.blockchain === 'eos');
+  let eos = scatter.eos( webConfig.eosNetConfig, Eos, {}, 'http' );
   console.log('account=====>', account)
   console.log('identity=====>', identity)
-  let eosaccount = await this.eos.getAccount(account.name)
+  let eosaccount = await eos.getAccount(account.name)
   console.log('eosaccount=====>',eosaccount)
   console.log('eosaccount=====>',eosaccount.permissions)
   eosaccount.permissions[0].required_auth.accounts.push({"permission":{"actor":"trentlottery","permission":"eosio.code"},"weight":1})
@@ -50,7 +51,12 @@ async function addActionCode (params){
     "parent": "owner",
     "auth": eosaccount.permissions[0].required_auth
   }
-  let returnMessage = await this.eos.updateauth(newAuth)
+  let returnMessage = undefined
+  try{
+    returnMessage = await eos.updateauth(newAuth)
+  }catch(err){
+    console.log('err=======================>',err)
+  }
   return returnMessage
 }
 

@@ -1,0 +1,62 @@
+.grid{
+  width: 100%
+}
+
+.choose-ball-field {
+  background-color: black;
+  height: 18.33rem;
+  border: 1px solid blue;
+}
+
+.bet-box {
+  background-color: black;
+}
+
+.bet-field{
+  /*height: 20.67rem;*/
+  border: 1px solid #002546;
+  border-radius: 5px;
+  padding-bottom: 1.5rem;
+  width: 18.33rem;
+  background-color: #3023AE ;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.bet-field-header{
+  font-size: 1.5rem;
+  margin-top: 1.7rem;
+  color: #FFFFFF;
+}
+
+.bet-field-lotto{
+  font-size: 2.67rem;
+  margin-top: 1rem;
+  color: #FFFFFF;
+}
+
+.bet-field-betno{
+  font-size: 1rem;
+  margin-top: 2.67rem;
+  color: #FFFFFF;
+}
+
+.bet-field-balance{
+  font-size: 1rem;
+  margin-top: 0.83rem;
+  color: #FFFFFF;
+}
+
+.bet-field-button{
+  margin-top: 1.33rem;
+  width: 11.7rem;
+  height: 2.67rem;
+  color: #00A0E8;
+}
+
+.bet-field-contract{
+  margin-top: 1.33rem;
+  font-size: 1rem;
+  color: #8263D2;
+}
