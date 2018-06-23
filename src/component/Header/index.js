@@ -5,7 +5,7 @@ import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {Link, withRouter} from 'react-router-dom'
 import {appConfigAction, appConfigSelector} from '../../util/config'
-import {Button, Grid, Row, Col} from 'react-bootstrap';
+import {Button, Grid, Row, Col, Image} from 'react-bootstrap';
 import "./header.css"
 import ShareBox from './shareBox'
 import Hitnumber from './hitnumber'
@@ -26,7 +26,7 @@ class Header extends Component {
       <Grid className = "grid">
         <Row className = "header-row">
           <Col xs={12} md={3} className = "header-col">
-            <span className = "header-logo">'i 'm Logo'</span>
+            <Image src="../../asset/png/add.png" thumbnail />
           </Col>
           <Col xs={6} md={7} className = "header-col">
             <Hitnumber />

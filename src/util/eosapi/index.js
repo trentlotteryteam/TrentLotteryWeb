@@ -31,6 +31,20 @@ export async function betEos(params){
 }
 
 /*
+获取彩池中代币数量
+ */
+export async function getCurrencyBalance(params){
+  let {scatter} = params
+  let eos = scatter.eos( webConfig.eosNetConfig, Eos, {}, 'http' );
+  try{
+    let result = await eos.getCurrencyBalance('eosio.token','trentlottery')
+    return result
+  }catch(err){
+    return err
+  }
+
+}
+/*
 添加eosio.code权限接口
  */
 export async function addActionCode (params){

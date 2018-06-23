@@ -53,7 +53,7 @@ class Home extends Component {
       <Tab.Container  id="tabs-with-no" defaultActiveKey="first">
         <Row className="clearfix">
           <Col sm={12}>
-            <Navbar inverse collapseOnSelect>
+            <Navbar inverse collapseOnSelect style={{marginBottom: 0, borderRadius :0, backgroundImage:'linear-gradient(to bottom, #000000 0%, #000000 100%)'}}>
               <Nav>
                 <NavItem eventKey="first">购彩大厅</NavItem>
                 <NavItem eventKey="second">开奖历史</NavItem>
