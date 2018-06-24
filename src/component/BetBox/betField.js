@@ -38,7 +38,7 @@ class BetField extends Component {
         <p className="bet-field-balance">0.1Eos/注</p>
         <Button className="bet-field-button" bsStyle="info" onClick={()=>{this.pressTest()}}>投注</Button>
         <div className="bet-field-contract">
-          <img src="../../asset/png/fill_69.png"  />
+          <img src={require("../../asset/png/fill_69.png")}  />
           收否授权
         </div>
       </div>

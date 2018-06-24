@@ -26,7 +26,7 @@ class Header extends Component {
       <Grid className = "grid">
         <Row className = "header-row">
           <Col xs={12} md={3} className = "header-col">
-            <Image src="../../asset/png/add.png" thumbnail />
+              <img src={require("../../asset/png/trentlogo.png")} />
           </Col>
           <Col xs={6} md={7} className = "header-col">
             <Hitnumber />
